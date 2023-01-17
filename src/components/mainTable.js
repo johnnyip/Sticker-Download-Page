@@ -105,6 +105,7 @@ export default function MainTable() {
                 onClick={() => {
                     setInstalled("")
                     setNeedUpdate(true)
+                    window.location.reload();
                 }}>重設Cookies(綠色已下載標記)</Button>
 
 
