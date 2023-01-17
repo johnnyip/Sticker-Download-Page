@@ -19,6 +19,7 @@ export default function MainTable() {
             let installed_cookie = await getCookies()
             if (installed_cookie !== undefined) {
                 installed_cookie = installed_cookie.split(',')
+                console.log(installed_cookie)
                 setInstalled(installed_cookie)
             }
         }

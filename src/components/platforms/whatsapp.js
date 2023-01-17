@@ -19,6 +19,7 @@ export default function Whatsapp(props) {
 
     const setDownloaded = (id) => {
         let tmp_installed = installed
+        console.log(tmp_installed)
         tmp_installed.push(id)
         setInstalled(tmp_installed)
         setNeedUpdate(true)
