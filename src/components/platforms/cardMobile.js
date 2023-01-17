@@ -37,7 +37,7 @@ export default function LinkCardMobile(props) {
                                     <Button
                                         leftIcon={<IconArrowLeft />}
                                         fullWidth
-                                        disabled={(currSequence == 1)}
+                                        disabled={(currSequence === 1)}
                                         onClick={() => {
                                             setActiveTab(`what_${currSequence - 1}`)
                                         }}>
@@ -47,7 +47,7 @@ export default function LinkCardMobile(props) {
                                     <Button
                                         rightIcon={<IconArrowRight />}
                                         fullWidth
-                                        disabled={(currSequence == size)}
+                                        disabled={(currSequence === size)}
                                         onClick={() => {
                                             setActiveTab(`what_${currSequence + 1}`)
                                         }}>

@@ -31,9 +31,10 @@
     display: block;
 }
 
-/* .mantine-Accordion-chevron{
-    display: none;
-} */
+.icon{
+    fill: none;
+    width: 50px
+}
 
 @media only screen and (min-width: 1024px) {
     .main {
