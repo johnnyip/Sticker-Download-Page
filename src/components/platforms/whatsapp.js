@@ -63,6 +63,7 @@ export default function Whatsapp(props) {
                                     data={item}
                                     key={`what_${id}`}
                                     id={`what_${id}`}
+                                    idHeader={`what_`}
                                     installed={installed.includes(`what_${id}`)}
                                     setDownloaded={setDownloaded} />
                             </div>
@@ -86,6 +87,8 @@ export default function Whatsapp(props) {
                                         data={item}
                                         key={`what_mobi_${id}`}
                                         id={`what_${id}`}
+                                        idHeader={`what_`}
+                                        showNotInstalled={showNotInstalled}
                                         installed={installed.includes(`what_${id}`)}
                                         setDownloaded={setDownloaded}
                                         activeTab={activeTab}

@@ -6,10 +6,13 @@ import { IconExternalLink, IconArrowRight, IconArrowLeft } from '@tabler/icons'
 export default function LinkCardMobile(props) {
     let data = props.data
     let id = props.id
-    let installed = props.installed
-    let setDownloaded = props.setDownloaded
-    let currSequence = parseInt(id.split("_")[1])
     let size = props.size
+    let installed = props.installed
+    let idHeader = props.idHeader
+    let setDownloaded = props.setDownloaded
+    let showNotInstalled = props.showNotInstalled
+
+    let currSequence = parseInt(id.split("_")[1])
 
     let activeTab = props.activeTab
     let setActiveTab = props.setActiveTab
@@ -21,7 +24,7 @@ export default function LinkCardMobile(props) {
             <Accordion.Control>
                 <div className='center'>
                     {installed ? "✅" : ""}
-                    {data.name} ({data.category}){"  "}
+                    {data.name} {(data.category !== "") ? `(${data.category})` : ""}{"  "}
                     {/* <Badge color="pink" variant="light" radius="xs">New</Badge> */}
 
                 </div>
@@ -32,27 +35,25 @@ export default function LinkCardMobile(props) {
                     <Card shadow="sm" p="xs" radius="md" withBorder >
                         <Card.Section >
                             <Group grow>
-                                <a href={`#what_${currSequence - 1}`} style={{ textDecorationLine: "none" }}>
 
-                                    <Button
-                                        leftIcon={<IconArrowLeft />}
-                                        fullWidth
-                                        disabled={(currSequence === 1)}
-                                        onClick={() => {
-                                            setActiveTab(`what_${currSequence - 1}`)
-                                        }}>
-                                        上一個</Button>
-                                </a>
-                                <a href={`#what_${currSequence + 1}`} style={{ textDecorationLine: "none" }}>
-                                    <Button
-                                        rightIcon={<IconArrowRight />}
-                                        fullWidth
-                                        disabled={(currSequence === size)}
-                                        onClick={() => {
-                                            setActiveTab(`what_${currSequence + 1}`)
-                                        }}>
-                                        下一個</Button>
-                                </a>
+                                <Button
+                                    className={showNotInstalled ? "hidden" : ""}
+                                    leftIcon={<IconArrowLeft />}
+                                    fullWidth
+                                    disabled={(currSequence === 1)}
+                                    onClick={() => {
+                                        setActiveTab(`${idHeader}${currSequence - 1}`)
+                                    }}>
+                                    上一個</Button>
+                                <Button
+                                    className={showNotInstalled ? "hidden" : ""}
+                                    rightIcon={<IconArrowRight />}
+                                    fullWidth
+                                    disabled={(currSequence === size)}
+                                    onClick={() => {
+                                        setActiveTab(`${idHeader}${currSequence + 1}`)
+                                    }}>
+                                    下一個</Button>
                             </Group>
 
                             <div >

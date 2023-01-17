@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Accordion, Text, Button } from '@mantine/core';
-import { IconBrandWhatsapp, IconBrandTelegram, IconMessageCircle2 } from '@tabler/icons';
+import { Accordion, Text, Button, Badge } from '@mantine/core';
+import { IconBrandWhatsapp, IconBrandTelegram, IconMessageCircle2, IconBrandGithub } from '@tabler/icons';
 
 import { setCookies, getCookies } from '../functions/cookie';
 
@@ -46,7 +46,9 @@ export default function MainTable() {
             <hr />
 
             總計超過750款Sticker! <br />
-            所有<u>動態</u>及<u>靜態</u>貼圖現已合拼於同一貼圖包內 <br /><br />
+            所有<u>動態</u>及<u>靜態</u>貼圖現已合拼於同一貼圖包內 <br />
+            最後更新：<Badge radius="xs">17 Jan 2023</Badge>
+            <br /><br />
             [WhatsApp及Telegram]<br />貼圖包已根據貼圖用途作分類
             <br /><br />
 
@@ -75,7 +77,7 @@ export default function MainTable() {
                         </div>
                     </Accordion.Control>
                     <Accordion.Panel>
-                        <Whatsapp
+                        <Signal
                             installed={installed}
                             setInstalled={setInstalled}
                             setNeedUpdate={setNeedUpdate} />
@@ -90,7 +92,7 @@ export default function MainTable() {
                         </div>
                     </Accordion.Control>
                     <Accordion.Panel>
-                        <Whatsapp
+                        <Telegram
                             installed={installed}
                             setInstalled={setInstalled}
                             setNeedUpdate={setNeedUpdate} />
@@ -99,8 +101,8 @@ export default function MainTable() {
             </Accordion>
 
             <br />
-            <Text>本頁使用Cookies，用作標記已下載的貼圖包。<br/>
-            每次點選下載時，會自動標記為綠色(已下載)</Text>
+            <Text>本頁使用Cookies，用作標記已下載的貼圖包。<br />
+                每次點選下載時，會自動標記為綠色(已下載)</Text>
             <Button color={"gray"}
                 onClick={() => {
                     setInstalled("")
@@ -108,6 +110,14 @@ export default function MainTable() {
                     window.location.reload();
                 }}>重設Cookies(綠色已下載標記)</Button>
 
+            <hr />
+            特別鳴謝<br />
+            <a href='https://github.com/laggykiller/sticker-convert' target='_blank'>
+                <Button
+                    leftIcon={<IconBrandGithub />}>
+                    laggykiller/sticker-convert <br/>(貼圖上下載工具，香港人製作)
+                </Button>
+            </a>
 
         </div>
     );
