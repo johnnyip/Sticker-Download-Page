@@ -6,6 +6,10 @@
 
 .center {
     text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
 }
 
 .space {
@@ -25,8 +29,28 @@
     padding: 2px
 }
 
+.link-card-desktop{
+    display: none;
+}
+.link-card-mobile{
+    display: block;
+}
+
+/* .mantine-Accordion-chevron{
+    display: none;
+} */
+
 @media only screen and (min-width: 1024px) {
     .main {
         width: 50%;
     }
+
+    .link-card-desktop{
+        display: block;
+    }
+
+    .link-card-mobile{
+        display: none;
+    }
+    
 }
