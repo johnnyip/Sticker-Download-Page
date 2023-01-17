@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Modal, Button, SimpleGrid, Group, Accordion } from '@mantine/core';
-import { IconArrowsDownUp, IconInfoCircle } from '@tabler/icons'
+import { IconArrowsDownUp, IconInfoCircle, IconEyeOff, IconEye } from '@tabler/icons'
 
 import WhatsappLink_ from '../../data/whatsapp.json'
 import LinkCard from './card';
@@ -15,6 +15,7 @@ export default function Whatsapp(props) {
     const [links, setLinks] = useState(WhatsappLink_)
     const [reverseOrder, setReverseOrder] = useState(false)
     const [activeTab, setActiveTab] = useState("")
+    const [showNotInstalled, setShowNotInstalled] = useState(false)
 
     const setDownloaded = (id) => {
         let tmp_installed = installed
@@ -26,18 +27,26 @@ export default function Whatsapp(props) {
 
     return (
         <>
+            <Button leftIcon={<IconInfoCircle />} onClick={() => { setModalOpen(true) }}>
+                說明(早前已安裝的用戶)
+            </Button><br /><br />
             <Group position="center">
-                <Button leftIcon={<IconInfoCircle />} onClick={() => { setModalOpen(true) }}>
-                    說明(早前已安裝的用戶)
-                </Button>
                 <Button
+                    color="gray"
                     leftIcon={<IconArrowsDownUp />}
                     onClick={() => {
                         setReverseOrder(!reverseOrder)
                         setLinks(links.reverse())
-
                     }}>
                     倒轉顯示順序
+                </Button>
+                <Button
+                    color="gray"
+                    leftIcon={showNotInstalled ? <IconEye /> : <IconEyeOff />}
+                    onClick={() => {
+                        setShowNotInstalled(!showNotInstalled)
+                    }}>
+                    {showNotInstalled ? "顯示所有貼圖" : "只顯示未安裝貼圖"}
                 </Button>
 
             </Group>
@@ -46,39 +55,44 @@ export default function Whatsapp(props) {
             <SimpleGrid cols={4}>
                 {[...links].map((item, i) => {
                     let id = item.name.split("Machiko")[1]
-                    return (
-                        <div key={i} className="link-card-desktop">
-                            <LinkCard
-                                data={item}
-                                key={`what_${id}`}
-                                id={`what_${id}`}
-                                installed={installed.includes(`what_${id}`)}
-                                setDownloaded={setDownloaded} />
-                        </div>
-                    )
+                    if (!showNotInstalled || (showNotInstalled && !installed.includes(`what_${id}`))) {
+                        return (
+                            <div key={i} className="link-card-desktop">
+                                <LinkCard
+                                    data={item}
+                                    key={`what_${id}`}
+                                    id={`what_${id}`}
+                                    installed={installed.includes(`what_${id}`)}
+                                    setDownloaded={setDownloaded} />
+                            </div>
+                        )
+
+                    }
                 })}
             </SimpleGrid>
             <SimpleGrid cols={1}>
                 {[...links].map((item, i) => {
                     let id = item.name.split("Machiko")[1]
-                    return (
-                        <div key={i} className="link-card-mobile">
-                            <Accordion
-                                value={activeTab}
-                                onChange={setActiveTab}
-                                variant="separated">
-                                <LinkCardMobile
-                                    size={links.length}
-                                    data={item}
-                                    key={`what_mobi_${id}`}
-                                    id={`what_${id}`}
-                                    installed={installed.includes(`what_${id}`)}
-                                    setDownloaded={setDownloaded}
-                                    activeTab={activeTab}
-                                    setActiveTab={setActiveTab} />
-                            </Accordion>
-                        </div>
-                    )
+                    if (!showNotInstalled || (showNotInstalled && !installed.includes(`what_${id}`))) {
+                        return (
+                            <div key={i} className="link-card-mobile">
+                                <Accordion
+                                    value={activeTab}
+                                    onChange={setActiveTab}
+                                    variant="separated">
+                                    <LinkCardMobile
+                                        size={links.length}
+                                        data={item}
+                                        key={`what_mobi_${id}`}
+                                        id={`what_${id}`}
+                                        installed={installed.includes(`what_${id}`)}
+                                        setDownloaded={setDownloaded}
+                                        activeTab={activeTab}
+                                        setActiveTab={setActiveTab} />
+                                </Accordion>
+                            </div>
+                        )
+                    }
                 })}
             </SimpleGrid>
 

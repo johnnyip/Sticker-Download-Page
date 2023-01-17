@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Card, Image, Text, Badge, Button, Group, Accordion } from '@mantine/core';
+import { IconExternalLink, IconArrowRight, IconArrowLeft } from '@tabler/icons'
 
 
 export default function LinkCardMobile(props) {
@@ -34,19 +35,23 @@ export default function LinkCardMobile(props) {
                                 <a href={`#what_${currSequence - 1}`} style={{ textDecorationLine: "none" }}>
 
                                     <Button
+                                        leftIcon={<IconArrowLeft />}
+                                        fullWidth
                                         disabled={(currSequence == 1)}
                                         onClick={() => {
                                             setActiveTab(`what_${currSequence - 1}`)
                                         }}>
-                                        上一個貼圖包</Button>
+                                        上一個</Button>
                                 </a>
                                 <a href={`#what_${currSequence + 1}`} style={{ textDecorationLine: "none" }}>
                                     <Button
+                                        rightIcon={<IconArrowRight />}
+                                        fullWidth
                                         disabled={(currSequence == size)}
                                         onClick={() => {
                                             setActiveTab(`what_${currSequence + 1}`)
                                         }}>
-                                        下一個貼圖包</Button>
+                                        下一個</Button>
                                 </a>
                             </Group>
 
@@ -70,6 +75,7 @@ export default function LinkCardMobile(props) {
 
                         <a href={data.url} target="_blank" style={{ textDecorationLine: "none" }}>
                             <Button variant="light" color="blue" fullWidth mt="md" radius="md"
+                                leftIcon={<IconExternalLink size={14} />}
                                 onClick={() => {
                                     setDownloaded(id)
                                 }}>
