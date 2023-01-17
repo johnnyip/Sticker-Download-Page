@@ -31,9 +31,9 @@
     display: block;
 }
 
-.icon{
+.mantine-Button-icon{
     fill: none;
-    width: 50px
+    /* width: 50px */
 }
 
 @media only screen and (min-width: 1024px) {
