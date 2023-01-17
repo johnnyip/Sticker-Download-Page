@@ -29,9 +29,9 @@ export default function Signal(props) {
 
     return (
         <>
-            {/* <Button leftIcon={<IconInfoCircle />} onClick={() => { setModalOpen(true) }}>
-                說明(早前已安裝的用戶)
-            </Button><br /><br /> */}
+            <Button leftIcon={<IconInfoCircle />} onClick={() => { setModalOpen(true) }}>
+                Signal Emoji 快捷表情
+            </Button><br /><br />
             <Group position="center">
                 <Button
                     color="gray"
@@ -107,15 +107,11 @@ export default function Signal(props) {
                 className='center'
                 opened={modalOpen}
                 onClose={() => setModalOpen(false)}
-                title="說明(早前已安裝的用戶)"
+                title="Signal Emoji 快捷表情"
             >
-                由於原有使用的 <a href="https://whatsticker.online" target="_blank">Whatsticker</a>
-                安裝貼圖時太多廣告，現已轉為另一較少廣告平台 <a href="https://getstickerpack.com" target="_blank">Sticker Maker</a>
-                <br /><br />
-                貼圖由以往動態靜態分開，變成可以混合於同一貼圖包內。建議早前已安裝的用戶將貼圖包全數刪除後重新安裝。
-                <br /><br />
-            </Modal>
+                <img src={"https://johnnyip.com/wp-content/uploads/2023/01/Screenshot-2023-01-17-at-9.43.24-PM.png"} />
 
+            </Modal>
         </>
     )
 }
