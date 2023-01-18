@@ -115,7 +115,7 @@ export default function MainTable() {
             <a href='https://github.com/laggykiller/sticker-convert' target='_blank'>
                 <Button
                     leftIcon={<IconBrandGithub />}>
-                    laggykiller/sticker-convert <br />(貼圖上下載工具，香港人製作)
+                    laggykiller/sticker-convert <br />(貼圖跨應用程式上下載工具，香港人製作)
                 </Button>
             </a><br /><br /><br />
 
