@@ -28,6 +28,7 @@ export default function Telegram(props) {
 
     return (
         <>
+            <hr />
             {/* <Button leftIcon={<IconInfoCircle />} onClick={() => { setModalOpen(true) }}>
                 說明(早前已安裝的用戶)
             </Button><br /><br /> */}

@@ -29,6 +29,7 @@ export default function Signal(props) {
 
     return (
         <>
+            <hr />
             <Button leftIcon={<IconInfoCircle />} onClick={() => { setModalOpen(true) }}>
                 Signal Emoji 快捷表情
             </Button><br /><br />

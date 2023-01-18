@@ -28,8 +28,9 @@ export default function Whatsapp(props) {
 
     return (
         <>
+            <hr />
             <Button leftIcon={<IconInfoCircle />} onClick={() => { setModalOpen(true) }}>
-                說明(早前已安裝的用戶)
+                說明(早前已安裝的用戶)及常見問題
             </Button><br /><br />
             <Group position="center">
                 <Button
@@ -106,13 +107,20 @@ export default function Whatsapp(props) {
                 className='center'
                 opened={modalOpen}
                 onClose={() => setModalOpen(false)}
-                title="說明(早前已安裝的用戶)"
+                title="說明(早前已安裝的用戶)及常見問題"
             >
-                由於原有使用的 <a href="https://whatsticker.online" target="_blank">Whatsticker</a>
-                安裝貼圖時太多廣告，現已轉為另一較少廣告平台 <a href="https://getstickerpack.com" target="_blank">Sticker Maker</a>
+                由於原有使用的 <a href="https://whatsticker.online" target="_blank"><u>Whatsticker</u></a>
+                安裝貼圖時太多廣告，現已轉為另一較少廣告平台 <a href="https://getstickerpack.com" target="_blank"><u>Sticker Maker</u></a>
                 <br /><br />
                 貼圖由以往動態靜態分開，變成可以混合於同一貼圖包內。建議早前已安裝的用戶將貼圖包全數刪除後重新安裝。
                 <br /><br />
+
+                <hr />
+                <b>iOS用家無法打開App下載頁</b><br /><br />
+
+                如於下載頁面按下[Install Sticker]後，即使已安裝程式亦出現左邊畫面，可依照下圖指示修復問題。<br />
+                <img src="https://johnnyip.com/wp-content/uploads/2023/01/fix_1.png" width={"50%"} />
+                <img src="https://johnnyip.com/wp-content/uploads/2023/01/fix_2.png" width={"50%"} />
             </Modal>
 
         </>
