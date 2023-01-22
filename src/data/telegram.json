@@ -217,10 +217,18 @@
     },
     {
         "name": "Machiko28",
-        "category":"致敬貼圖 期間限定",
-        "thumbnail":"https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko28/tray_large.png",
+        "category":"致敬貼圖 期間限定 動態表情貼",
+        "thumbnail":"https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko28-1/tray_large.png?1f0f01b8815faaad5aa7bb3cb9346172&d=200x200",
         "new":"",
         "url": "https://t.me/addstickers/Machiko_28_by_johnnyip_stickerbot",
+        "url2": ""
+    },
+    {
+        "name": "Machiko29",
+        "category":"動態表情貼",
+        "thumbnail":"https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko29/tray_large.png?465861075663202ef91e1c3e4c8b50dc&d=200x200",
+        "new":"",
+        "url": "https://t.me/addstickers/Machiko_29_by_johnnyip_stickerbot",
         "url2": ""
     }
 ]

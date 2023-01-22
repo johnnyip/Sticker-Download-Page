@@ -47,7 +47,7 @@ export default function MainTable() {
 
             總計超過750款Sticker! <br />
             所有<u>動態</u>及<u>靜態</u>貼圖現已合拼於同一貼圖包內 <br />
-            最後更新：<Badge radius="xs">17 Jan 2023</Badge>
+            最後更新：<Badge radius="xs">23 Jan 2023</Badge>
             <br /><br />
             [WhatsApp及Telegram]<br />貼圖包已根據貼圖用途作分類
             <br /><br />
