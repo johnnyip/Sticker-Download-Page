@@ -25,7 +25,8 @@ export default function LinkCardMobile(props) {
                 <div className='center'>
                     {installed ? "✅" : ""}
                     {data.name} {(data.category !== "") ? `(${data.category})` : ""}{"  "}
-                    {/* <Badge color="pink" variant="light" radius="xs">New</Badge> */}
+                    {(data.new === true) ?
+                        <Badge color="pink" variant="light" radius="xs">New</Badge> : <></>}
 
                 </div>
             </Accordion.Control>

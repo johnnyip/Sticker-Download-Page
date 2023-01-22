@@ -26,6 +26,9 @@ export default function LinkCard(props) {
 
                 <Group position="apart" mt="md" mb="xs">
                     <Text weight={500}>{data.name}</Text>
+                    {(data.new === true) ?
+                        <Badge color="pink" variant="light" radius="xs">New</Badge> : <></>}
+
                 </Group>
 
                 <Text size="sm" color="dimmed">
