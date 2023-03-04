@@ -17,7 +17,7 @@ import Telegram from './platforms/telegram';
 export default function MainTable() {
     const lastUpdate = "2023-03-05 04:00"
     const [installed, setInstalled] = useState([])
-    const [needUpdate, setNeedUpdate] = useState(true)
+    const [needUpdate, setNeedUpdate] = useState(false)
     const [firstLoad, setFirstLoad] = useState(true)
     const [downlaodedCount, setDownlaodedCount] = useState(
         { "what": 0, "tg": 0, "signal": 0 })
@@ -56,19 +56,21 @@ export default function MainTable() {
                 installed_cookie = installed_cookie.split(',')
                 console.log(installed_cookie)
                 setInstalled(installed_cookie)
+                setNeedUpdate(true)
             }
+        }
+
+
+        if (firstLoad) {
+            fetchCookie()
+            countTotal()
+            setFirstLoad(false)
         }
 
         if (needUpdate) {
             setNeedUpdate(false)
             countDownloaded(installed)
             setCookies(installed)
-        }
-
-        if (firstLoad) {
-            fetchCookie()
-            countTotal()
-            setFirstLoad(false)
         }
     })
 
