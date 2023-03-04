@@ -88,7 +88,7 @@ export default function MainTable() {
                     <Accordion.Control >
                         <div className='center'>
                             <IconBrandTelegram className='space' color='blue' size={20} />
-                            Telegram (新)
+                            Telegram
                         </div>
                     </Accordion.Control>
                     <Accordion.Panel>
