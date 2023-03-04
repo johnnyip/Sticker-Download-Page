@@ -52,7 +52,7 @@ export default function LinkCard(props) {
                                 onClick={() => {
                                     setDownloaded(id)
                                 }}>
-                                下載(Sticker Maker, 動+靜態)
+                                下載(Sticker Maker, {(data.animated) ? "動+靜態" : "靜態"})
                             </Button>
                         </a>
                         <a href={data.url2} target="_blank" style={{ textDecorationLine: "none" }}>
