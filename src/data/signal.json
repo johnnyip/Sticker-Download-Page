@@ -70,5 +70,13 @@
         "new": false,
         "url": "https://signal.art/addstickers/#pack_id=e7d2808f3133866b2baf3b9d8f6a709c&pack_key=f9eb239e57b462a6a29a421fb8249341d6daa6a011d91b061b1836bfb75e9796",
         "url2": ""
+    },
+    {
+        "name": "Machiko10",
+        "category": "",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko30/tray_large.png?2f8583d445dc1a141d3e890c4d32bad1&d=200x200",
+        "new": true,
+        "url": "https://signal.art/addstickers/#pack_id=af779a30ea97ebd865d9465eb38da4aa&pack_key=2bb1ed3c1dea13dabc7521854dd0668d93e3e310441bfdb46d67a2b3693f2237",
+        "url2": ""
     }
 ]

@@ -219,7 +219,7 @@
         "name": "Machiko28",
         "category": "致敬貼圖 期間限定 動態表情貼",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko28-1/tray_large.png?1f0f01b8815faaad5aa7bb3cb9346172&d=200x200",
-        "new": true,
+        "new": false,
         "url": "https://getstickerpack.com/stickers/machiko28-1",
         "url2": "https://whatsticker.online/p/655099YByDQF6/HK"
     },
@@ -227,8 +227,24 @@
         "name": "Machiko29",
         "category": "動態表情貼",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko29/tray_large.png?465861075663202ef91e1c3e4c8b50dc&d=200x200",
-        "new": true,
+        "new": false,
         "url": "https://getstickerpack.com/stickers/machiko29",
         "url2": "https://whatsticker.online/p/655103POFymn7/HK"
+    },
+    {
+        "name": "Machiko30",
+        "category": "豐富表情篇",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko30/tray_large.png?2f8583d445dc1a141d3e890c4d32bad1&d=200x200",
+        "new": true,
+        "url": "https://getstickerpack.com/stickers/machiko30",
+        "url2": "https://whatsticker.online/p/661852Ge4ucuT/HK"
+    },
+    {
+        "name": "Machiko31",
+        "category": "豐富表情篇",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko31/tray_large.png?ac4ead74dff42babdf4d167296f656fb&d=200x200",
+        "new": true,
+        "url": "https://getstickerpack.com/stickers/machiko31",
+        "url2": "https://whatsticker.online/p/6618533WNdNin/HK"
     }
 ]
