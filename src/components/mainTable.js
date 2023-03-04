@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Accordion, Text, Button, Badge } from '@mantine/core';
+import { Accordion, Text, Button, Badge, Group } from '@mantine/core';
 import { IconBrandWhatsapp, IconBrandTelegram, IconMessageCircle2, IconBrandGithub } from '@tabler/icons';
+import moment from 'moment';
 
 import { setCookies, getCookies } from '../functions/cookie';
+
+import WhatsappLink from '../data/whatsapp.json'
+import TelegramLink from '../data/telegram.json'
+import SignalLink from '../data/signal.json'
 
 import Introduction from './introduction';
 import Whatsapp from './platforms/whatsapp';
@@ -10,9 +15,39 @@ import Signal from './platforms/signal';
 import Telegram from './platforms/telegram';
 
 export default function MainTable() {
+    const lastUpdate = "2023-03-05 04:00"
     const [installed, setInstalled] = useState([])
-    const [needUpdate, setNeedUpdate] = useState(false)
+    const [needUpdate, setNeedUpdate] = useState(true)
     const [firstLoad, setFirstLoad] = useState(true)
+    const [downlaodedCount, setDownlaodedCount] = useState(
+        { "what": 0, "tg": 0, "signal": 0 })
+    const [totalCount, setTotalCount] = useState(
+        { "what": 0, "tg": 0, "signal": 0 })
+
+    const countDownloaded = (installedArr) => {
+        let uniqueItems = [...new Set(installedArr)]
+        console.log(uniqueItems.length + ", " + installedArr.length)
+        let count = { "what": 0, "tg": 0, "signal": 0 }
+        uniqueItems.forEach((item) => {
+            if (item.includes("what_"))
+                count.what += 1;
+            else if (item.includes("tg_"))
+                count.tg += 1;
+            else if (item.includes("signal_"))
+                count.signal += 1;
+        })
+        console.log(count)
+        setDownlaodedCount(count)
+        return count;
+    }
+
+    const countTotal = () => {
+        let totalCount_ = { "what": 0, "tg": 0, "signal": 0 }
+        totalCount_.what = WhatsappLink.length
+        totalCount_.tg = TelegramLink.length
+        totalCount_.signal = SignalLink.length
+        setTotalCount(totalCount_)
+    }
 
     useEffect(() => {
         const fetchCookie = async () => {
@@ -26,11 +61,13 @@ export default function MainTable() {
 
         if (needUpdate) {
             setNeedUpdate(false)
+            countDownloaded(installed)
             setCookies(installed)
         }
 
         if (firstLoad) {
             fetchCookie()
+            countTotal()
             setFirstLoad(false)
         }
     })
@@ -47,7 +84,16 @@ export default function MainTable() {
 
             總計超過750款Sticker! <br />
             所有<u>動態</u>及<u>靜態</u>貼圖現已合拼於同一貼圖包內 <br />
-            最後更新：<Badge radius="xs">4 Mar 2023</Badge>
+
+            <Group position="center">
+                <Text>最後更新：</Text>
+                <Badge variant="outline" radius="xs">{moment(lastUpdate).format('YYYY-MMMM-DD hh:mm')}</Badge>
+                <Badge variant="filled" color="red" radius="xs">
+                    {moment(lastUpdate, "YYYY-MM-DD hh:mm").fromNow()}
+                </Badge>
+            </Group>
+
+
             <br /><br />
             [WhatsApp及Telegram]<br />貼圖包已根據貼圖用途作分類
             <br /><br />
@@ -57,7 +103,7 @@ export default function MainTable() {
                     <Accordion.Control >
                         <div className='center'>
                             <IconBrandWhatsapp className='space' color='green' size={20} />
-                            WhatsApp
+                            WhatsApp (已下載 {downlaodedCount.what}/{totalCount.what})
                         </div>
                     </Accordion.Control>
 
@@ -73,7 +119,7 @@ export default function MainTable() {
                     <Accordion.Control  >
                         <div className='center'>
                             <IconMessageCircle2 className='space' color='blue' size={20} />
-                            Signal
+                            Signal  (已下載 {downlaodedCount.signal}/{totalCount.signal})
                         </div>
                     </Accordion.Control>
                     <Accordion.Panel>
@@ -88,7 +134,7 @@ export default function MainTable() {
                     <Accordion.Control >
                         <div className='center'>
                             <IconBrandTelegram className='space' color='blue' size={20} />
-                            Telegram
+                            Telegram (已下載 {downlaodedCount.tg}/{totalCount.tg})
                         </div>
                     </Accordion.Control>
                     <Accordion.Panel>

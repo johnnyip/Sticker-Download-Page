@@ -20,10 +20,12 @@ export default function Signal(props) {
 
     const setDownloaded = (id) => {
         let tmp_installed = installed
+        if (!tmp_installed.includes(id)) {
+            tmp_installed.push(id)
+            setInstalled(tmp_installed)
+            setNeedUpdate(true)
+        }
         console.log(tmp_installed)
-        tmp_installed.push(id)
-        setInstalled(tmp_installed)
-        setNeedUpdate(true)
     }
 
 
