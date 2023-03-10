@@ -62,8 +62,6 @@ export default function Whatsapp(props) {
                     if (!showNotInstalled || (showNotInstalled && !installed.includes(`what_${id}`))) {
                         return (
                             <div key={i} className="link-card-desktop">
-                                {/* {(i % 4 === 0) ? <> */}
-                                {/* </> : <></>} */}
                                 <LinkCard
                                     data={item}
                                     key={`what_${id}`}
@@ -103,6 +101,11 @@ export default function Whatsapp(props) {
                                         setDownloaded={setDownloaded}
                                         activeTab={activeTab}
                                         setActiveTab={setActiveTab} />
+                                    <Adsense
+                                        client="ca-pub-4090876297549969"
+                                        slot="6275668077"
+                                    />
+
                                 </Accordion>
                             </div>
                         )
