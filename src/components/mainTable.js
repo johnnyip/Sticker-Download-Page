@@ -80,10 +80,6 @@ export default function MainTable() {
         <div className="main center" >
 
             <h2>最新最齊 ㄇㄚˊ幾兔 Machiko 貼圖 Sticker 動態 Animated</h2>
-            <Adsense
-                client="ca-pub-4090876297549969"
-                slot="6275668077"
-            />
 
             <Introduction />
 
@@ -175,6 +171,15 @@ export default function MainTable() {
 
             <hr />
             如有任何問題，歡迎到FB Group留言提出!
+
+            <Adsense
+                client="ca-pub-4090876297549969"
+                slot="6275668077"
+            />
+            <Adsense
+                client="ca-pub-4090876297549969"
+                slot="6275668077"
+            />
 
         </div>
     );

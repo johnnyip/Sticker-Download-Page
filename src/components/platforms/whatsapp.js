@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Modal, Button, SimpleGrid, Group, Accordion } from '@mantine/core';
 import { IconArrowsDownUp, IconInfoCircle, IconEyeOff, IconEye } from '@tabler/icons'
-import { Adsense } from '@ctrl/react-adsense';
+// import { Adsense } from '@ctrl/react-adsense';
 
 import WhatsappLink_ from '../../data/whatsapp.json'
 import LinkCard from './card';
@@ -69,10 +69,10 @@ export default function Whatsapp(props) {
                                     idHeader={`what_`}
                                     installed={installed.includes(`what_${id}`)}
                                     setDownloaded={setDownloaded} />
-                                <Adsense
+                                {/* <Adsense
                                     client="ca-pub-4090876297549969"
                                     slot="6275668077"
-                                />
+                                /> */}
 
                             </div>
                         )
@@ -101,10 +101,10 @@ export default function Whatsapp(props) {
                                         setDownloaded={setDownloaded}
                                         activeTab={activeTab}
                                         setActiveTab={setActiveTab} />
-                                    <Adsense
+                                    {/* <Adsense
                                         client="ca-pub-4090876297549969"
                                         slot="6275668077"
-                                    />
+                                    /> */}
 
                                 </Accordion>
                             </div>
