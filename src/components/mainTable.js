@@ -80,11 +80,11 @@ export default function MainTable() {
         <div className="main center" >
 
             <h2>最新最齊 ㄇㄚˊ幾兔 Machiko 貼圖 Sticker 動態 Animated</h2>
-            {/* <Adsense
+            <Adsense
                 client="ca-pub-4090876297549969"
-                slot="7689354929"
+                slot="6275668077"
             />
- */}
+
             <Introduction />
 
             <hr />

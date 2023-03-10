@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Modal, Button, SimpleGrid, Group, Accordion } from '@mantine/core';
 import { IconArrowsDownUp, IconInfoCircle, IconEyeOff, IconEye } from '@tabler/icons'
+import { Adsense } from '@ctrl/react-adsense';
 
 import WhatsappLink_ from '../../data/whatsapp.json'
 import LinkCard from './card';
@@ -20,9 +21,9 @@ export default function Whatsapp(props) {
     const setDownloaded = (id) => {
         let tmp_installed = installed
         // if (!tmp_installed.includes(id)) {
-            tmp_installed.push(id)
-            setInstalled(tmp_installed)
-            setNeedUpdate(true)
+        tmp_installed.push(id)
+        setInstalled(tmp_installed)
+        setNeedUpdate(true)
         // }
         console.log(tmp_installed)
     }
@@ -61,6 +62,8 @@ export default function Whatsapp(props) {
                     if (!showNotInstalled || (showNotInstalled && !installed.includes(`what_${id}`))) {
                         return (
                             <div key={i} className="link-card-desktop">
+                                {/* {(i % 4 === 0) ? <> */}
+                                {/* </> : <></>} */}
                                 <LinkCard
                                     data={item}
                                     key={`what_${id}`}
@@ -68,6 +71,11 @@ export default function Whatsapp(props) {
                                     idHeader={`what_`}
                                     installed={installed.includes(`what_${id}`)}
                                     setDownloaded={setDownloaded} />
+                                <Adsense
+                                    client="ca-pub-4090876297549969"
+                                    slot="6275668077"
+                                />
+
                             </div>
                         )
 
