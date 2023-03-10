@@ -91,6 +91,7 @@ export default function MainTable() {
 
             總計超過750款Sticker! <br />
             所有<u>動態</u>及<u>靜態</u>貼圖現已合拼於同一貼圖包內 <br />
+            <i>網站現已增設廣告，用作維持伺服器運作、貼圖包整合及網頁開發成本。</i><br />
 
             <Group position="center">
                 <Text>最後更新：</Text>
