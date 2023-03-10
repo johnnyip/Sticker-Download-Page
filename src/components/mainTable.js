@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Accordion, Text, Button, Badge, Group } from '@mantine/core';
 import { IconBrandWhatsapp, IconBrandTelegram, IconMessageCircle2, IconBrandGithub } from '@tabler/icons';
 import moment from 'moment';
+import { Adsense } from '@ctrl/react-adsense';
 
 import { setCookies, getCookies } from '../functions/cookie';
 
@@ -79,6 +80,10 @@ export default function MainTable() {
         <div className="main center" >
 
             <h2>最新最齊 ㄇㄚˊ幾兔 Machiko 貼圖 Sticker 動態 Animated</h2>
+            <Adsense
+                client="ca-pub-4090876297549969"
+                slot="7689354929"
+            />
 
             <Introduction />
 

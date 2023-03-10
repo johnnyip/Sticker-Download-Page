@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ctrl/react-adsense": "^1.6.1",
     "@emotion/react": "^11.9.3",
     "@mantine/core": "^5.0.0",
     "@mantine/hooks": "^5.0.0",
