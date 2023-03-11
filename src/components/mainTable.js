@@ -86,9 +86,12 @@ export default function MainTable() {
             <hr />
 
             總計超過750款Sticker! <br />
-            所有<u>動態</u>及<u>靜態</u>貼圖現已合拼於同一貼圖包內 <br />
-            <i>網站現已增設廣告，用作維持伺服器運作、貼圖包整合及網頁開發成本。</i><br />
+            所有<u>動態</u>及<u>靜態</u>貼圖現已合拼於同一貼圖包內 <br /><br />
+            <i>網站現已增設廣告，用作維持伺服器運作、貼圖包整合及網頁開發成本。<br/>
+            歡迎隨意點擊頁面廣告支持！</i><br />
 
+
+            <hr />
             <Group position="center">
                 <Text>最後更新：</Text>
                 <Badge variant="outline" radius="xs">{moment(lastUpdate).format('YYYY-MMMM-DD hh:mm')}</Badge>
