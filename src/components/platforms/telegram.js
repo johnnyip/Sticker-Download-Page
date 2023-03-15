@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Modal, Button, SimpleGrid, Group, Accordion } from '@mantine/core';
-import { IconArrowsDownUp, IconInfoCircle, IconEyeOff, IconEye } from '@tabler/icons'
+import { IconArrowsDownUp, IconBrandTelegram, IconEyeOff, IconEye } from '@tabler/icons'
 
 import TelegramLink_ from '../../data/telegram.json'
 import LinkCard from './card';
@@ -34,6 +34,7 @@ export default function Telegram(props) {
             {/* <Button leftIcon={<IconInfoCircle />} onClick={() => { setModalOpen(true) }}>
                 說明(早前已安裝的用戶)
             </Button><br /><br /> */}
+
             <Group position="center">
                 <Button
                     color="gray"
@@ -54,6 +55,10 @@ export default function Telegram(props) {
                 </Button>
 
             </Group>
+            <a target="_blank" href="https://t.me/johnnyip_stickerbot" rel="noopener">
+                <Button leftIcon={<IconBrandTelegram />}>貼圖包快速下載連結Bot</Button>
+            </a><br />
+
             <hr />
 
             <SimpleGrid cols={4}>
