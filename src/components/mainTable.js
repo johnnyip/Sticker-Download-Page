@@ -16,7 +16,7 @@ import Signal from './platforms/signal';
 import Telegram from './platforms/telegram';
 
 export default function MainTable() {
-    const lastUpdate = "2023-03-05 04:00"
+    const lastUpdate = "2023-03-16 05:30"
     const [installed, setInstalled] = useState([])
     const [needUpdate, setNeedUpdate] = useState(false)
     const [firstLoad, setFirstLoad] = useState(true)
@@ -87,8 +87,8 @@ export default function MainTable() {
 
             總計超過750款Sticker! <br />
             所有<u>動態</u>及<u>靜態</u>貼圖現已合拼於同一貼圖包內 <br /><br />
-            <i>網站現已增設廣告，用作維持伺服器運作、貼圖包整合及網頁開發成本。<br/>
-            歡迎隨意點擊頁面廣告支持！</i><br />
+            <i>網站現已增設廣告，用作維持伺服器運作、貼圖包整合及網頁開發成本。<br />
+                歡迎隨意點擊頁面廣告支持！</i><br />
 
 
             <hr />
@@ -102,7 +102,10 @@ export default function MainTable() {
 
 
             <br /><br />
-            [WhatsApp及Telegram]<br />貼圖包已根據貼圖用途作分類
+            <a target="_blank" href="t.me/johnnyip_stickerbot" rel="noopener">
+                <Button leftIcon={<IconBrandTelegram />}>貼圖包快速下載連結Bot[只限Telegram貼圖]</Button>
+            </a>
+
             <br /><br />
 
             <Accordion  >
