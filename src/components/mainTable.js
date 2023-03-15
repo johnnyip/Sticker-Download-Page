@@ -102,7 +102,7 @@ export default function MainTable() {
 
 
             <br /><br />
-            <a target="_blank" href="t.me/johnnyip_stickerbot" rel="noopener">
+            <a target="_blank" href="https://t.me/johnnyip_stickerbot" rel="noopener">
                 <Button leftIcon={<IconBrandTelegram />}>貼圖包快速下載連結Bot[只限Telegram貼圖]</Button>
             </a>
 
