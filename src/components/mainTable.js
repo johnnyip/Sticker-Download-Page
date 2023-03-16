@@ -5,6 +5,7 @@ import moment from 'moment';
 import { Adsense } from '@ctrl/react-adsense';
 
 import { setCookies, getCookies } from '../functions/cookie';
+import { fetchGitHubRepoData } from '../functions/github';
 
 import WhatsappLink from '../data/whatsapp.json'
 import TelegramLink from '../data/telegram.json'
@@ -16,7 +17,8 @@ import Signal from './platforms/signal';
 import Telegram from './platforms/telegram';
 
 export default function MainTable() {
-    const lastUpdate = "2023-03-16 05:30"
+    // const lastUpdate = "2023-03-16 05:30"
+    const [lastUpdate, setLastUpdate] = useState(new Date(""))
     const [installed, setInstalled] = useState([])
     const [needUpdate, setNeedUpdate] = useState(false)
     const [firstLoad, setFirstLoad] = useState(true)
@@ -61,10 +63,17 @@ export default function MainTable() {
             }
         }
 
+        const fetchDate = async () => {
+            let date = await fetchGitHubRepoData()
+            console.log(date)
+            setLastUpdate(new Date(date))
+        }
+
 
         if (firstLoad) {
             fetchCookie()
             countTotal()
+            fetchDate()
             setFirstLoad(false)
         }
 
