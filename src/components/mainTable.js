@@ -96,7 +96,6 @@ export default function MainTable() {
 
             總計超過750款Sticker! <br />
             所有<u>動態</u>及<u>靜態</u>貼圖現已合拼於同一貼圖包內 <br /><br />
-            <i>網站現已增設廣告，用作維持伺服器運作、貼圖包整合及網頁開發成本。</i><br />
 
 
             <hr />
@@ -185,7 +184,7 @@ export default function MainTable() {
 
             <hr />
             如有任何問題，歡迎到FB Group留言提出!
-
+{/* 
             <Adsense
                 client="ca-pub-4090876297549969"
                 slot="6275668077"
@@ -193,7 +192,7 @@ export default function MainTable() {
             <Adsense
                 client="ca-pub-4090876297549969"
                 slot="6275668077"
-            />
+            /> */}
 
         </div>
     );
