@@ -13,7 +13,6 @@ export default function LinkCardMobile(props) {
 
     let currSequence = parseInt(id.split("_")[1])
 
-    let activeTab = props.activeTab
     let setActiveTab = props.setActiveTab
 
     return (

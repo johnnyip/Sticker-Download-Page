@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Modal, Button, SimpleGrid, Group, Accordion } from '@mantine/core';
 import { IconArrowsDownUp, IconInfoCircle, IconEyeOff, IconEye } from '@tabler/icons'
-// import { Adsense } from '@ctrl/react-adsense';
 
 import WhatsappLink_ from '../../data/whatsapp.json'
 import LinkCard from './card';
@@ -20,11 +19,9 @@ export default function Whatsapp(props) {
 
     const setDownloaded = (id) => {
         let tmp_installed = installed
-        // if (!tmp_installed.includes(id)) {
         tmp_installed.push(id)
         setInstalled(tmp_installed)
         setNeedUpdate(true)
-        // }
         console.log(tmp_installed)
     }
 

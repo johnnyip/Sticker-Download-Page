@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Accordion, Text, Button, Badge, Group } from '@mantine/core';
 import { IconBrandWhatsapp, IconBrandTelegram, IconMessageCircle2, IconBrandGithub } from '@tabler/icons';
 import moment from 'moment';
-// import { Adsense } from '@ctrl/react-adsense';
 
 import { setCookies, getCookies } from '../functions/cookie';
 import { fetchGitHubRepoData } from '../functions/github';
