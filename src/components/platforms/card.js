@@ -1,7 +1,4 @@
-import { useState } from 'react';
-import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
-import { IconFileDownload } from '@tabler/icons'
-
+import { Card, Text, Badge, Button, Group } from '@mantine/core';
 
 export default function LinkCard(props) {
     let data = props.data

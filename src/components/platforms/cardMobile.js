@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import { Card, Image, Text, Badge, Button, Group, Accordion } from '@mantine/core';
-import { IconExternalLink, IconArrowRight, IconArrowLeft } from '@tabler/icons'
+import { Card, Text, Badge, Button, Group, Accordion } from '@mantine/core';
+import { IconArrowRight, IconArrowLeft } from '@tabler/icons'
 
 
 export default function LinkCardMobile(props) {

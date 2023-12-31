@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconBrandFacebook, IconArrowsShuffle, IconUsers, IconBrandInstagram } from '@tabler/icons';
+import { IconBrandFacebook, IconArrowsShuffle, IconBrandInstagram } from '@tabler/icons';
 import { Grid, Button, Image } from '@mantine/core';
 
 import RandomPhotoURL from '../data/randomPhoto.json'
@@ -7,7 +7,7 @@ import RandomPhotoURL from '../data/randomPhoto.json'
 
 export default function Introduction() {
     const crypto = window.crypto || window.msCrypto;
-    var array = new Uint32Array(1);
+    let array = new Uint32Array(1);
     crypto.getRandomValues(array); // Compliant for security-sensitive use cases
     
     const [randomNumber, setRandomNumber] = useState(array[0] % 9)

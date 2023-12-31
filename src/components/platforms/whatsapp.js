@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Modal, Button, SimpleGrid, Group, Accordion } from '@mantine/core';
 import { IconArrowsDownUp, IconInfoCircle, IconEyeOff, IconEye } from '@tabler/icons'
 // import { Adsense } from '@ctrl/react-adsense';
@@ -61,7 +61,7 @@ export default function Whatsapp(props) {
                     let id = item.name.split("Machiko")[1]
                     if (!showNotInstalled || (showNotInstalled && !installed.includes(`what_${id}`))) {
                         return (
-                            <div key={i} className="link-card-desktop">
+                            <div key={id} className="link-card-desktop">
                                 <LinkCard
                                     data={item}
                                     key={`what_${id}`}
@@ -85,7 +85,7 @@ export default function Whatsapp(props) {
                     let id = item.name.split("Machiko")[1]
                     if (!showNotInstalled || (showNotInstalled && !installed.includes(`what_${id}`))) {
                         return (
-                            <div key={i} className="link-card-mobile">
+                            <div key={id} className="link-card-mobile">
                                 <Accordion
                                     value={activeTab}
                                     onChange={setActiveTab}
