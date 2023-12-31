@@ -183,7 +183,7 @@ export default function MainTable() {
             </a><br /><br /><br />
 
             <hr />
-            如有任何問題，歡迎到FB Group留言提出!
+            {/* 如有任何問題，歡迎到FB Group留言提出! */}
 {/* 
             <Adsense
                 client="ca-pub-4090876297549969"
