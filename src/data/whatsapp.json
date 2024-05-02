@@ -282,7 +282,7 @@
         "name": "Machiko32",
         "category": "追星篇",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko32/sticker_1.png?053f1992368214ac7c2f773bd30c3fa0&d=200x200",
-        "new": true,
+        "new": false,
         "animated": false,
         "url": "https://getstickerpack.com/stickers/machiko32",
         "url2": "https://whatsticker.online/p/711958FzjiynR/HK"
@@ -291,9 +291,27 @@
         "name": "Machiko33",
         "category": "追星篇",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko33/tray_large.png?41a705d4ae69a142a3bff52f7805361f&d=200x200",
-        "new": true,
+        "new": false,
         "animated": false,
         "url": "https://getstickerpack.com/stickers/machiko33",
         "url2": "https://whatsticker.online/p/711959QZ71NGq/HK"
+    },
+    {
+        "name": "Machiko34",
+        "category": "塗鴉貼圖！",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko-34/tray_large.png?5b0a1445ca77d77c1e9b0633ee933d5b&d=200x200",
+        "new": true,
+        "animated": false,
+        "url": "https://getstickerpack.com/stickers/machiko-34",
+        "url2": "https://whatsticker.online/p/729574QIRTlhq/HK/zh"
+    },
+    {
+        "name": "Machiko35",
+        "category": "塗鴉貼圖！",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko35/tray_large.png?17f545dccf805b9f5d839b75b313d8a4&d=200x200",
+        "new": true,
+        "animated": false,
+        "url": "https://getstickerpack.com/stickers/machiko35",
+        "url2": "https://whatsticker.online/p/729575X1fuRRz/HK/zh"
     }
 ]

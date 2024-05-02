@@ -243,8 +243,16 @@
         "name": "Machiko31",
         "category": "追星篇",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko32/sticker_1.png?053f1992368214ac7c2f773bd30c3fa0&d=200x200",
-        "new": true,
+        "new": false,
         "url": "https://t.me/addstickers/Machiko31_by_johnnyip_stickerbot",
+        "url2": ""
+    },
+    {
+        "name": "Machiko32",
+        "category": "塗鴉貼圖！",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko32/sticker_1.png?053f1992368214ac7c2f773bd30c3fa0&d=200x200",
+        "new": true,
+        "url": "https://t.me/addstickers/Machiko32_by_johnnyip_stickerbot",
         "url2": ""
     }
 ]
