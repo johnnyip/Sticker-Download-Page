@@ -90,7 +90,7 @@ export default function LinkCardMobile(props) {
                                         onClick={() => {
                                             setDownloaded(id)
                                         }}>
-                                        下載(Sticker Maker, {(data.animated) ? "動+靜態" : "靜態"})
+                                        下載(Whatsticker, 靜態)
                                     </Button>
                                 </a>
                                 <a href={data.url2} target="_blank" style={{ textDecorationLine: "none" }}>
@@ -98,7 +98,7 @@ export default function LinkCardMobile(props) {
                                         onClick={() => {
                                             setDownloaded(id)
                                         }}>
-                                        後備下載(Whatsticker, 靜態)
+                                        後備下載(Sticker Maker, {(data.animated) ? "動+靜態" : "靜態"})
                                     </Button>
                                 </a>
 

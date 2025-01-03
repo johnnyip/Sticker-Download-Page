@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, Button, SimpleGrid, Group, Accordion } from '@mantine/core';
 import { IconArrowsDownUp, IconInfoCircle, IconEyeOff, IconEye } from '@tabler/icons'
 
@@ -27,6 +27,10 @@ export default function Signal(props) {
         }
         console.log(tmp_installed)
     }
+
+    useEffect(() => {
+        setLinks(SignalLink_.slice().reverse());
+    }, []);
 
 
     return (

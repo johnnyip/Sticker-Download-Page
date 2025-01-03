@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, Button, SimpleGrid, Group, Accordion } from '@mantine/core';
 import { IconArrowsDownUp, IconInfoCircle, IconEyeOff, IconEye } from '@tabler/icons'
 
@@ -24,6 +24,10 @@ export default function Whatsapp(props) {
         setNeedUpdate(true)
         console.log(tmp_installed)
     }
+
+    useEffect(() => {
+        setLinks(WhatsappLink_.slice().reverse());
+    }, []);
 
     return (
         <>
@@ -135,3 +139,4 @@ export default function Whatsapp(props) {
         </>
     )
 }
+

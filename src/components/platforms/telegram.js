@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, Button, SimpleGrid, Group, Accordion } from '@mantine/core';
 import { IconArrowsDownUp, IconBrandTelegram, IconEyeOff, IconEye } from '@tabler/icons'
 
@@ -27,6 +27,10 @@ export default function Telegram(props) {
         console.log(tmp_installed)
     }
 
+
+    useEffect(() => {
+        setLinks(TelegramLink_.slice().reverse());
+    }, []);
 
     return (
         <>
@@ -109,7 +113,7 @@ export default function Telegram(props) {
             </SimpleGrid>
 
 
-            <Modal
+            {/* <Modal
                 centered
                 className='center'
                 opened={modalOpen}
@@ -121,7 +125,7 @@ export default function Telegram(props) {
                 <br /><br />
                 貼圖由以往動態靜態分開，變成可以混合於同一貼圖包內。建議早前已安裝的用戶將貼圖包全數刪除後重新安裝。
                 <br /><br />
-            </Modal>
+            </Modal> */}
 
         </>
     )

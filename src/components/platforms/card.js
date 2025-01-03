@@ -45,19 +45,19 @@ export default function LinkCard(props) {
                     </> : <>
                         {/* For Whatsapp */}
                         <a href={data.url} target="_blank" style={{ textDecorationLine: "none" }}>
-                            <Button variant="light" color="blue" fullWidth mt="md" radius="md"
-                                onClick={() => {
-                                    setDownloaded(id)
-                                }}>
-                                下載(Sticker Maker, {(data.animated) ? "動+靜態" : "靜態"})
-                            </Button>
-                        </a>
-                        <a href={data.url2} target="_blank" style={{ textDecorationLine: "none" }}>
                             <Button variant="light" color="gray" fullWidth mt="md" radius="md"
                                 onClick={() => {
                                     setDownloaded(id)
                                 }}>
-                                後備下載(Whatsticker, 靜態)
+                                下載(Whatsticker, 靜態)
+                            </Button>
+                        </a>
+                        <a href={data.url2} target="_blank" style={{ textDecorationLine: "none" }}>
+                            <Button variant="light" color="blue" fullWidth mt="md" radius="md"
+                                onClick={() => {
+                                    setDownloaded(id)
+                                }}>
+                                後備下載(Sticker Maker, {(data.animated) ? "動+靜態" : "靜態"})
                             </Button>
                         </a>
                     </>}
