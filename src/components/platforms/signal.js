@@ -14,7 +14,7 @@ export default function Signal(props) {
 
     const [modalOpen, setModalOpen] = useState(false)
     const [links, setLinks] = useState(SignalLink_)
-    const [reverseOrder, setReverseOrder] = useState(false)
+    const [reverseOrder, setReverseOrder] = useState(true)
     const [activeTab, setActiveTab] = useState("")
     const [showNotInstalled, setShowNotInstalled] = useState(false)
 
