@@ -300,7 +300,7 @@
         "name": "Machiko34",
         "category": "塗鴉貼圖！",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko-34/tray_large.png?5b0a1445ca77d77c1e9b0633ee933d5b&d=200x200",
-        "new": true,
+        "new": false,
         "animated": false,
         "url": "https://getstickerpack.com/stickers/machiko-34",
         "url2": "https://whatsticker.online/p/729574QIRTlhq/HK/zh"
@@ -309,9 +309,27 @@
         "name": "Machiko35",
         "category": "塗鴉貼圖！",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko35/tray_large.png?17f545dccf805b9f5d839b75b313d8a4&d=200x200",
-        "new": true,
+        "new": false,
         "animated": false,
         "url": "https://getstickerpack.com/stickers/machiko35",
         "url2": "https://whatsticker.online/p/729575X1fuRRz/HK/zh"
+    },
+    {
+        "name": "Machiko36",
+        "category": "生活篇",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko36/sticker_1.webp?bced71023a69d3e69fbf6526bacd049f&d=200x200",
+        "new": true,
+        "animated": false,
+        "url": "https://getstickerpack.com/stickers/machiko36",
+        "url2": "https://whatsticker.online/p/751052d1NRV1a/HK/zh"
+    },
+    {
+        "name": "Machiko37",
+        "category": "生活篇",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko37/sticker_1.png?93b073b1957422819a629541844344f0&d=200x200",
+        "new": true,
+        "animated": false,
+        "url": "https://getstickerpack.com/stickers/machiko37",
+        "url2": "https://whatsticker.online/p/751053OvtcYh7/HK"
     }
 ]

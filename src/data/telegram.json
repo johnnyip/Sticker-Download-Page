@@ -251,8 +251,16 @@
         "name": "Machiko32",
         "category": "塗鴉貼圖！",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko-34/tray_large.png?5b0a1445ca77d77c1e9b0633ee933d5b&d=200x200",
-        "new": true,
+        "new": false,
         "url": "https://t.me/addstickers/Machiko32_by_johnnyip_stickerbot",
+        "url2": ""
+    },
+    {
+        "name": "Machiko33",
+        "category": "生活篇(製作中)",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko36/sticker_1.webp?bced71023a69d3e69fbf6526bacd049f&d=200x200",
+        "new": true,
+        "url": "https://t.me/addstickers/Machiko33_by_johnnyip_stickerbot",
         "url2": ""
     }
 ]

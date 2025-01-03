@@ -91,8 +91,16 @@
         "name": "Machiko12",
         "category": "",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko-34/tray_large.png?5b0a1445ca77d77c1e9b0633ee933d5b&d=200x200",
-        "new": true,
+        "new": false,
         "url": "https://signal.art/addstickers/#pack_id=b50dc83cff7577b7e6ac39e8ffd68d15&pack_key=3af79680e3accffd13005ed24b80b80f66d525287bff771ba630ec38b9a0eaaa",
+        "url2": ""
+    },
+    {
+        "name": "Machiko13",
+        "category": "",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko36/sticker_1.webp?bced71023a69d3e69fbf6526bacd049f&d=200x200",
+        "new": true,
+        "url": "https://signal.art/addstickers/#pack_id=f7c55fa0f72d75a12509df1ea4c4d4e2&pack_key=e328abb255c0609ccc4877c702484112033e097f6e1527929d54654fd54fa54f",
         "url2": ""
     }
 ]
