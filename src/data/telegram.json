@@ -259,8 +259,16 @@
         "name": "Machiko33",
         "category": "生活篇",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko36/sticker_1.webp?bced71023a69d3e69fbf6526bacd049f&d=200x200",
-        "new": true,
+        "new": false,
         "url": "https://t.me/addstickers/Machiko33_by_johnnyip_stickerbot",
+        "url2": ""
+    },
+    {
+        "name": "Machiko34",
+        "category": "ㄇㄚˊ幾兔－表情貼2",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko38/tray_large.png?de5b0029948dfeade9abf914f495b83c&d=200x200",
+        "new": true,
+        "url": "https://t.me/addstickers/Machiko34_by_johnnyip_stickerbot",
         "url2": ""
     }
 ]
