@@ -110,5 +110,13 @@
         "new": true,
         "url": "https://signal.art/addstickers/#pack_id=b73f9434610954ca9703c295c1b02d9a&pack_key=85193f3c36151d09f568a3e7ab17ee834d8f48286d1f2f09734db78ff470e931",
         "url2": ""
+    },
+    {
+        "name": "Machiko15",
+        "category": "",
+        "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko40/tray_large.png?66e38818ab604fef912cae5b0b1f2648&d=200x200",
+        "new": true,
+        "url": "https://signal.art/addstickers/#pack_id=83b4c4212cf664b7f58d353f5b7dc658&pack_key=2e8ff371f72b2ad1fd1106cf3dd9adea6d9c8be2f1e78164390818ea8705bc3a",
+        "url2": ""
     }
 ]
