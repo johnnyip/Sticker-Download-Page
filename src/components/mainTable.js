@@ -100,7 +100,7 @@ export default function MainTable() {
             <hr />
             <Group position="center">
                 <Text>最後更新：</Text>
-                <Badge variant="outline" radius="xs">{moment(lastUpdate).format('YYYY-MMMM-DD hh:mm')}</Badge>
+                <Badge variant="outline" radius="xs">{moment(lastUpdate).utcOffset("+08:00").format('YYYY-MMMM-DD HH:mm [HKT]')}</Badge>
                 <Badge variant="filled" color="red" radius="xs">
                     {moment(lastUpdate, "YYYY-MM-DD hh:mm").fromNow()}
                 </Badge>
