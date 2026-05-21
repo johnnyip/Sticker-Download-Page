@@ -1,22 +1,29 @@
 
+
 export const fetchGitHubRepoData = async () => {
-  const url = 'https://api.github.com/repos/johnnyip/Sticker-Download-Page/commits/main';
-  const headers = new Headers({
-    Accept: 'application/vnd.github+json',
-    'X-GitHub-Api-Version': '2022-11-28',
-  });
+    const url = "https://cors.johnnyip.com/https://api.github.com/repos/johnnyip/sticker-download-page/branches/main";
+    const headers = new Headers({
+        "X-GitHub-Api-Version": "2022-11-28"
+    });
 
-  try {
-    const response = await fetch(url, { headers });
+    let dateString = "";
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+    try {
+        const response = await fetch(url, { headers });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+        dateString = data.commit.commit.author.date;
+        // dateString = dateString.split("T")
+        // dateString = dateString[0] + " " + dateString[1].substring(0,5)
+        console.log(dateString);
+    } catch (error) {
+        console.error("Failed to fetch GitHub repo data:", error);
     }
 
-    const data = await response.json();
-    return data.commit?.author?.date ?? '';
-  } catch (error) {
-    console.error('Failed to fetch GitHub repo data:', error);
-    return '';
-  }
+    return dateString;
 };
