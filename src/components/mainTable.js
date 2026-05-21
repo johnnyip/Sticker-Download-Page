@@ -17,7 +17,7 @@ import Telegram from './platforms/telegram';
 
 export default function MainTable() {
     // const lastUpdate = "2023-03-16 05:30"
-    const [lastUpdate, setLastUpdate] = useState(new Date(""))
+    const [lastUpdate, setLastUpdate] = useState("")
     const [installed, setInstalled] = useState([])
     const [needUpdate, setNeedUpdate] = useState(false)
     const [firstLoad, setFirstLoad] = useState(true)
@@ -51,6 +51,10 @@ export default function MainTable() {
         setTotalCount(totalCount_)
     }
 
+    const lastUpdateMoment = lastUpdate
+        ? moment.parseZone(lastUpdate).utcOffset("+08:00")
+        : null;
+
     useEffect(() => {
         const fetchCookie = async () => {
             let installed_cookie = await getCookies()
@@ -65,7 +69,7 @@ export default function MainTable() {
         const fetchDate = async () => {
             let date = await fetchGitHubRepoData()
             console.log(date)
-            setLastUpdate(new Date(date))
+            setLastUpdate(date)
         }
 
 
@@ -100,9 +104,15 @@ export default function MainTable() {
             <hr />
             <Group position="center">
                 <Text>最後更新：</Text>
-                <Badge variant="outline" radius="xs">{moment(lastUpdate).utcOffset("+08:00").format('YYYY-MMMM-DD HH:mm [HKT]')}</Badge>
+                <Badge variant="outline" radius="xs">
+                    {lastUpdateMoment && lastUpdateMoment.isValid()
+                        ? lastUpdateMoment.format('YYYY-MM-DD HH:mm [HKT]')
+                        : '--'}
+                </Badge>
                 <Badge variant="filled" color="red" radius="xs">
-                    {moment(lastUpdate, "YYYY-MM-DD hh:mm").fromNow()}
+                    {lastUpdateMoment && lastUpdateMoment.isValid()
+                        ? lastUpdateMoment.fromNow()
+                        : '--'}
                 </Badge>
             </Group>
 
