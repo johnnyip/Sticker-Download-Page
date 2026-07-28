@@ -107,7 +107,7 @@
         "name": "Machiko14",
         "category": "",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko38/tray_large.png?de5b0029948dfeade9abf914f495b83c&d=200x200",
-        "new": true,
+        "new": false,
         "url": "https://signal.art/addstickers/#pack_id=b73f9434610954ca9703c295c1b02d9a&pack_key=85193f3c36151d09f568a3e7ab17ee834d8f48286d1f2f09734db78ff470e931",
         "url2": ""
     },
@@ -115,7 +115,7 @@
         "name": "Machiko15",
         "category": "",
         "thumbnail": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/machiko40/tray_large.png?66e38818ab604fef912cae5b0b1f2648&d=200x200",
-        "new": true,
+        "new": false,
         "url": "https://signal.art/addstickers/#pack_id=83b4c4212cf664b7f58d353f5b7dc658&pack_key=2e8ff371f72b2ad1fd1106cf3dd9adea6d9c8be2f1e78164390818ea8705bc3a",
         "url2": ""
     },
@@ -123,7 +123,7 @@
         "name": "Machiko16",
         "category": "",
         "thumbnail": "https://stickershop.line-scdn.net/stickershop/v1/product/34122403/LINEStorePC/main.png?v=1",
-        "new": true,
+        "new": false,
         "url": "https://signal.art/addstickers/#pack_id=2651fb8e57705e1c665842a368cd0ab4&pack_key=336c120fd481631ffc708b02b56d15baec1d290d91c1a925d5b4b5b0cc497377",
         "url2": ""
     },
