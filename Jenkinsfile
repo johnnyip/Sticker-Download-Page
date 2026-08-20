@@ -17,5 +17,5 @@ pipeline {
       '
     ''' } }
   }
-  post { failure { mail to: 'johnny@johnnyip.com', subject: "FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}", body: "Sticker Download Page Pipeline failed.\n\nJob: ${env.JOB_NAME}\nBuild: #${env.BUILD_NUMBER}\nBranch: ${env.GIT_BRANCH ?: 'main'}\nCommit: ${env.GIT_COMMIT ?: 'unknown'}\nConsole: ${env.BUILD_URL}console\n" }; always { cleanWs deleteDirs: true, disableDeferredWipeout: true, notFailBuild: true } }
+  post { always { step([$class: 'Mailer', recipients: 'johnny@johnnyip.com', notifyEveryUnstableBuild: false, sendToIndividuals: false]); cleanWs deleteDirs: true, disableDeferredWipeout: true, notFailBuild: true } }
 }
