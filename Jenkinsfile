@@ -36,7 +36,7 @@ const fs = require('node:fs');
 
 const manifest = JSON.parse(fs.readFileSync('/deploy/build/asset-manifest.json', 'utf8'));
 const expected = [manifest.files.mainJs, manifest.files.mainCss]
-  .map((path) => path.replace(/^\//, ''));
+  .map((path) => path.startsWith('/') ? path.slice(1) : path);
 
 if (expected.length !== 2 || expected.some((path) => !path)) {
   throw new Error('asset-manifest.json does not contain mainJs and mainCss');
