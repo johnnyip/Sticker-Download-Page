@@ -15,7 +15,8 @@ export default function LinkCardMobile({
     <Accordion.Item value={id} style={{ backgroundColor: installed ? '#CDFFC4' : '' }}>
       <Accordion.Control>
         <div className="center">
-          {installed ? '✅' : ''}
+          {/* Keep WordPress emoji replacement inside a React-owned element. */}
+          {installed ? <span>✅</span> : null}
           {data.name} {data.category ? `(${data.category})` : ''}{' '}
           {data.new ? (
             <Badge color="pink" variant="light" radius="xs">
