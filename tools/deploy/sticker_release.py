@@ -4,7 +4,8 @@ import hashlib,io,json,os,pathlib,re,subprocess,sys,tarfile,urllib.request
 BASE='https://johnnyip.com/wp-content/reactpress/apps/sticker/build/'
 def sha(b):return hashlib.sha256(b).hexdigest()
 def pack():
- revision=os.environ['GIT_COMMIT'];number=os.environ['BUILD_NUMBER']
+ revision=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip();number=os.environ['BUILD_NUMBER']
+ if os.environ.get('GIT_COMMIT',revision)!=revision:raise ValueError('SCM environment differs from checkout')
  if not re.fullmatch('[0-9a-f]{40}',revision) or not re.fullmatch('[1-9][0-9]{0,8}',number):raise ValueError('bad build identity')
  root=pathlib.Path('.publish/build');files={}
  for p in sorted(root.rglob('*')):
